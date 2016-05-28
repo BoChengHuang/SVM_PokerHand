@@ -1,0 +1,14 @@
+{
+  "name": "svm_pokerhand",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BoCheng Huang",
+  "license": "ISC",
+  "dependencies": {
+    "node-svm": "^2.1.7"
+  }
+}
