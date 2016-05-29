@@ -3,10 +3,8 @@ var fs = require('fs');
 var so = require('stringify-object');
 var svm = require('node-svm');
 var _a = require('mout/array');
-var trainingData = './src/poker_sim_test';
-var testingData = './src/poker_sim_test.t';
-//var trainingData = './src/poker';
-//var testingData = './src/poker.t';
+var trainingData = './src/training_set_size_500';
+var testingData = './src/testing_set_size_500.t';
 var n = 0;
 var testingDataSize = 500;
 var testingSet;
@@ -41,12 +39,8 @@ svm.read(trainingData)
             })
             .spread(function (model, report) {
                 console.log('SVM trained. \nReport :\n%s', so(report));
-                fs.writeFileSync('./model/poker_sim_test.json', JSON.stringify(model));  // persist the model
                 return dataset;
             });
-    })
-    .then(function (testSet) {
-
     })
     .fail(function (err) {
         throw err;

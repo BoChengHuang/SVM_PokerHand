@@ -9,6 +9,6 @@
   "author": "BoCheng Huang",
   "license": "ISC",
   "dependencies": {
-    "node-svm": "^2.1.7"
+    "node-svm": "^2.1.8"
   }
 }
