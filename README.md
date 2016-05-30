@@ -7,7 +7,7 @@ Use SVM to predict poker hand ramdomly.
 # What is this repository for? ###
 
 * Quick summary: Use SVM to predict poker hand ramdomly.
-* Version 1.0.0
+* Version 1.1.0
 
 # How do I get set up? ###
 
