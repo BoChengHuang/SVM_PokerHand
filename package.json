@@ -9,6 +9,8 @@
   "author": "BoCheng Huang",
   "license": "ISC",
   "dependencies": {
-    "node-svm": "^2.1.8"
+    "node-svm": "^2.1.8",
+    "socket.io": "*",
+    "express": "*"
   }
 }

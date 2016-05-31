@@ -7,9 +7,9 @@ Use SVM to predict poker hand ramdomly.
 # What is this repository for? ###
 
 * Quick summary: Use SVM to predict poker hand ramdomly.
-* Version 1.1.1
+* Version 2.0.0
 
-# How do I get set up? ###
+# How do I get set up? (just node.js in terminal)###
 
 * Install Node.js
 * '$ npm install' in cmd/terminal first to intstall [node-svm](https://github.com/nicolaspanel/node-svm).
@@ -18,6 +18,15 @@ Use SVM to predict poker hand ramdomly.
 * If you want to build a model for latter use. Please use '$ node-svm train <dataset file> [<where to save the prediction model>] [<options>]'
 * '$ node predict.js' to predict small data by modfify a 1-D array.
 
+# How do I get set up? (host in localhost, and play on website)###
+* Install Node.js
+* cd/to/path, '$ npm install'
+* '$ node index.js' to host
+* open web browser to localhost:1234
+* enjoy
+
+
 # Contribution guidelines ###
 * Bo Cheng Huang
-* ndoe-svm in Libsvm
+* node-svm in Libsvm
+* socket.io

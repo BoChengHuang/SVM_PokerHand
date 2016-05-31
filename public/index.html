@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AI-Proj: Poker Hand</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Poker Hand</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="https://github.com/BoChengHuang/SVM_PokerHand">Github Code</a>
+                    </li>
+                    <li>
+                        <a href="http://www.bochengw.twbbs.org/home/?page_id=8">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Poker Hand in SVM.</h1>
+                <p class="lead">Let compuer check what you can give!</p>
+                <ul class="list-unstyled">
+                    <li>Card 1 (Suit and numner)
+                    <select id="card1suit">
+                        <option value="spades">spades</option>
+                        <option value="hearts">Hearts</option>
+                        <option value="diamonds">Diamonds</option>
+                        <option value="clubs">clubs</option>
+                    </select>
+                    <select id="card1number">
+                        <option value="ace">ace</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="jack">jack</option>
+                        <option value="queen">queen</option>
+                        <option value="king">king</option>
+                    </select></li><br>
+                    
+                    <li>Card 2 (Suit and numner)
+                    <select id="card2suit">
+                        <option value="spades">spades</option>
+                        <option value="hearts">Hearts</option>
+                        <option value="diamonds">Diamonds</option>
+                        <option value="clubs">clubs</option>
+                    </select>
+                    <select id="card2number">
+                        <option value="ace">ace</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="jack">jack</option>
+                        <option value="queen">queen</option>
+                        <option value="king">king</option>
+                    </select></li><br>
+                    
+                    <li>Card 3 (Suit and numner)
+                    <select id="card3suit">
+                        <option value="spades">spades</option>
+                        <option value="hearts">Hearts</option>
+                        <option value="diamonds">Diamonds</option>
+                        <option value="clubs">clubs</option>
+                    </select>
+                    <select id="card3number">
+                        <option value="ace">ace</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="jack">jack</option>
+                        <option value="queen">queen</option>
+                        <option value="king">king</option>
+                    </select></li><br>
+                    
+                    <li>Card 4 (Suit and numner)
+                    <select id="card4suit">
+                        <option value="spades">spades</option>
+                        <option value="hearts">Hearts</option>
+                        <option value="diamonds">Diamonds</option>
+                        <option value="clubs">clubs</option>
+                    </select>
+                    <select id="card4number">
+                        <option value="ace">ace</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="jack">jack</option>
+                        <option value="queen">queen</option>
+                        <option value="king">king</option>
+                    </select></li><br>
+                    
+                    <li>Card 5 (Suit and numner)
+                    <select id="card5suit">
+                        <option value="spades">spades</option>
+                        <option value="hearts">Hearts</option>
+                        <option value="diamonds">Diamonds</option>
+                        <option value="clubs">clubs</option>
+                    </select>
+                    <select id="card5number">
+                        <option value="ace">ace</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="jack">jack</option>
+                        <option value="queen">queen</option>
+                        <option value="king">king</option>
+                    </select></li><br>
+                <input class="btn-primary" type="button" id="cardButton" value="Set"/>
+                </ul>
+                <img id="card1" src="PokerImage/ace_of_clubs.png" style="width:104px;height:142px;">
+                <img id="card2" src="PokerImage/ace_of_clubs.png" style="width:104px;height:142px;">
+                <img id="card3" src="PokerImage/ace_of_clubs.png" style="width:104px;height:142px;">
+                <img id="card4" src="PokerImage/ace_of_clubs.png" style="width:104px;height:142px;">
+                <img id="card5" src="PokerImage/ace_of_clubs.png" style="width:104px;height:142px;">
+                <br><br><button class="btn-success" onclick="predict();">Submit</button>
+                <br><br><label id="result"></label>
+            </div>
+        </div>
+        <!-- /.row -->
+        <p>&copy SHW Team</p>
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.6/socket.io.js"></script>
+
+</body>
+<script>
+    
+    var socket = io("http://140.118.155.49:1234");
+    var cardSuit = [];
+    var cardNumber = [];
+    
+    document.getElementById("cardButton").addEventListener("click", function() {
+        
+        for (i = 0; i < 5; i++) {
+            cardSuit.push(document.getElementById("card" + (i+1) + "suit").value);
+            cardNumber.push(document.getElementById("card" + (i+1) + "number").value);
+            document.getElementById("card" + (i+1)).src = "PokerImage/" + cardNumber[i] + "_of_" + cardSuit[i] + ".png";
+        }
+    }, false);
+    
+    function predict() {
+        if (cardSuit.length != 5 && cardNumber.length != 5) {
+            alert("Set first!!!");
+        }
+        var guess = [];
+        for (i = 0; i < 5; i++) {
+            switch (cardSuit[i]) {
+                case "hearts":
+                    guess.push(1);
+                    break;
+                case "spades":
+                    guess.push(2);
+                    break;
+                case "diamonds":
+                    guess.push(3);
+                    break;    
+                 case "clubs":
+                    guess.push(4);
+                    break;   
+            }
+            
+            switch (cardNumber[i]) {
+                case "ace":
+                    guess.push(1);
+                    break;
+                case "jack":
+                    guess.push(11);
+                    break;
+                case "queen":
+                    guess.push(12);
+                    break;    
+                 case "king":
+                    guess.push(13);
+                    break;
+                 default:
+                    guess.push(parseInt(cardNumber[i]));
+            }
+        }
+        console.log(guess);
+        socket.emit("guess", guess);
+    }
+    
+    socket.on("result", function(result) {
+        var resultLab = document.getElementById("result");
+        switch(result) {
+            case 0:
+                resultLab.innerHTML = "Nothing in hand; not a recognized poker hand";
+                break;
+            case 1:
+                resultLab.innerHTML = "One pair; one pair of equal ranks within five cards";
+                break;
+            case 2:
+                resultLab.innerHTML = "Two pairs; two pairs of equal ranks within five cards";
+                break;
+            case 3:
+                resultLab.innerHTML = "Three of a kind; three equal ranks within five cards";
+                break;
+            case 4:
+                resultLab.innerHTML = "Straight; five cards, sequentially ranked with no gaps";
+                break;
+            case 5:
+                resultLab.innerHTML = "Flush; five cards with the same suit";
+                break;
+            case 6:
+                resultLab.innerHTML = "Full house; pair + different rank three of a kind";
+                break;
+            case 7:
+                resultLab.innerHTML = "Four of a kind; four equal ranks within five cards";
+                break;      
+            case 8:
+                resultLab.innerHTML = "Straight flush; straight + flush";
+                break;      
+            case 9:
+                resultLab.innerHTML = "Royal flush; {Ace, King, Queen, Jack, Ten} + flush";
+                break;                      
+        }
+        console.log(result);
+        cardSuit = [];
+        cardNumber = [];
+    });
+    
+    
+</script>
+</html>
